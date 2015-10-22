@@ -222,7 +222,25 @@ Posts.schema = new SimpleSchema({
         });
       }
     }
+  },
+  /**
+    Custom fields - 22/10/15 - START
+  */
+  price: {
+    type: Number,
+    optional: true
+  },
+  discount: {
+    type: Number,
+    optional: true
+  },
+  source: {
+    type: String,
+    optional: true
   }
+  /**
+    Custom fields - END
+  */
 });
 
 // schema transforms

@@ -1,5 +1,5 @@
-Telescope.utils.icons.liked = "heart";
-Telescope.utils.icons.notliked = "heart-o";
+Telescope.utils.icons.liked = "thumbs-up";
+Telescope.utils.icons.notliked = "thumbs-down";
 
 Telescope.utils.icons.user = "user";
 Telescope.utils.icons.add = "plus";
@@ -14,3 +14,5 @@ Telescope.utils.icons.duration = "clock-o";
 
 Telescope.utils.icons.twitter = "twitter";
 Telescope.utils.icons.facebook = "facebook";
+
+Telescope.utils.icons.currency = "rupee";

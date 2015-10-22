@@ -7,21 +7,21 @@
         </div>
         <a class="post-info" href="{{this.getPageUrl}}">
           <h3 class="post-title2">{{title}}</h3>
-          <div class="post-summary">
+          <!--div class="post-summary">
             <div class="post-summary-inner">
               {{{summary}}}
             </div>
-          </div>
+          </div-->
         </a>
       </div>
       <div class="post-footer">
         <div class="post-footer-left">
           {{> post_vote}}
           {{> post_discuss}}
-          {{#if duration}}
-            <div class="post-duration">
-              {{{icon "duration"}}}
-              <span class="action-count">{{duration}}</span>
+          {{#if price}}
+            <div class="post-price">
+              {{{icon "currency"}}}
+              <span class="action-count">{{{price}}}</span>
             </div>
           {{/if}}
           {{> post_admin}}
