@@ -84,9 +84,9 @@ Telescope.callbacks.add("postClass", addThumbnailClass);
 function checkIfPreviouslyPosted (data) {
   Meteor.call("checkForDuplicates", data.url, function (error, result) {
     if (error) {
-      Messages.flash(error.reason + '. <a href="'+FlowRouter.path("postPage", {_id: error.details})+'">'+i18n.t("go_to_post")+'</a>');  
+      Messages.flash(error.reason, 'error');
+      FlowRouter.go("postPage", {_id: error.details, slug: "posted"});
     }
   });
 }
 Telescope.callbacks.add("afterEmbedlyPrefill", checkIfPreviouslyPosted);
-

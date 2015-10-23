@@ -19,7 +19,9 @@
         {{/with}}
 
         <div class="post-content">
-
+          {{#if showMessage}}
+          <div class="grid-small grid-block-alert dialog no-rights error" aria-live="polite">This link has already been posted.</div>
+          {{/if}}
           {{#if showThumbnail}}
             <div class="post-thumbnail" aria-hidden="true">
               <a class="post-thumbnail-link" href="{{this.getLink}}" target="_blank">

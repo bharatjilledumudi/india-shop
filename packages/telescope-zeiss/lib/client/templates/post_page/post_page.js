@@ -4,7 +4,11 @@ Template.post_page.helpers({
   },
   showThumbnail: function () {
     return this.thumbnailUrl && !(this.media && this.media.type === "video");
-  }
+  },
+  showMessage: function () {
+    var slug = FlowRouter.getParam("slug");
+    return slug && slug === "posted";
+  },
 });
 
 Template.post_page.onRendered(function () {
