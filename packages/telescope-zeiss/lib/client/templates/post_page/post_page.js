@@ -13,7 +13,7 @@ Template.post_page.helpers({
 
 Template.post_page.onRendered(function () {
   $(".js-video").fitVids();
-  $(".body-overlay").css("background-image", "url("+this.data.post.thumbnailUrl+")");
+  $(".body-overlay").css("background-image", "url("+this.data.thumbnailUrl+")");
 });
 
 Template.post_page.onDestroyed(function () {
