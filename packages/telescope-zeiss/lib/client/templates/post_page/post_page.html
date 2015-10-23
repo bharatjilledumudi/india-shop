@@ -23,7 +23,7 @@
           {{#if showThumbnail}}
             <div class="post-thumbnail" aria-hidden="true">
               <a class="post-thumbnail-link" href="{{this.getLink}}" target="_blank">
-                <img class="post-thumbnail-image" src="{{thumbnailUrl}}" onerror="this.style.display='none';" aria-hidden="true"/>
+                <img class="post-thumbnail-image" alt="" src="{{thumbnailUrl}}" onerror="this.style.display='none';" aria-hidden="true"/>
               </a>
             </div>
           {{/if}}
@@ -35,6 +35,12 @@
 
           {{#if body}}
             {{> post_body}}
+          {{/if}}
+
+          {{#if price}}
+            <div class="post-price2">
+              {{{icon "currency"}}}{{{price}}}
+            </div>
           {{/if}}
 
           {{> post_categories}}

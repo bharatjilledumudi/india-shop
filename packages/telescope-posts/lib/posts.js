@@ -38,7 +38,7 @@ Posts.schema = new SimpleSchema({
     max: 500,
     editableBy: ["member", "admin"],
     autoform: {
-      type: "bootstrap-url"
+      type: "bootstrap-url",
     }
   },
   /**
@@ -66,6 +66,7 @@ Posts.schema = new SimpleSchema({
     max: 3000,
     editableBy: ["member", "admin"],
     autoform: {
+      type: "hidden",
       rows: 5
     }
   },
@@ -228,7 +229,9 @@ Posts.schema = new SimpleSchema({
   */
   price: {
     type: Number,
-    optional: true
+    decimal: true,
+    optional: true,
+    editableBy: ["member", "admin"]
   },
   discount: {
     type: Number,
@@ -236,7 +239,11 @@ Posts.schema = new SimpleSchema({
   },
   source: {
     type: String,
-    optional: true
+    optional: true,
+    editableBy: ["member", "admin"],
+    autoform: {
+      type: "hidden"
+    }
   }
   /**
     Custom fields - END

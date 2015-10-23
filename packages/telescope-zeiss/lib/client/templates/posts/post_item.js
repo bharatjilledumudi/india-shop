@@ -4,8 +4,5 @@ Template.post_item.helpers({
   },
   title: function () {
     return Telescope.utils.trimWords(this.title, 10);
-  },
-  price: function () {
-    return 1.11;
   }
 });

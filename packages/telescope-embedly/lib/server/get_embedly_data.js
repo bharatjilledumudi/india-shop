@@ -33,7 +33,7 @@ getEmbedlyData = function (url) {
       result.data.sourceUrl = result.data.authors[0].url;
     }
 
-    var embedlyData = _.pick(result.data, 'title', 'media', 'description', 'thumbnailUrl', 'sourceName', 'sourceUrl');
+    var embedlyData = _.pick(result.data, 'title', 'media', 'description', 'thumbnailUrl', 'sourceName', 'sourceUrl', 'provider_name');
 
     return embedlyData;
 

@@ -54,6 +54,16 @@
     }
   }
 
+  .post-price2{
+    @include small{
+      font-size: 20px;
+    }
+    @include medium-large{
+      font-size: 24px;
+    }
+    margin-bottom: 10px;
+  }
+
   .post-vote{
     display: inline-block;
     font-size: 18px;

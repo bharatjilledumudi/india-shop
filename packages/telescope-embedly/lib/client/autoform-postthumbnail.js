@@ -8,6 +8,7 @@ var fillEmbedlyData = function (instance) {
   var $urlField = $('[name="url"]');
   var $titleField = $('[name="title"]');
   var $bodyField = $('[name="body"]');
+  var $sourceField = $('[name="source"]');
   var url = $urlField.val();
 
   var $thumbnailContainer = instance.$('.post-thumbnail-container');
@@ -37,9 +38,11 @@ var fillEmbedlyData = function (instance) {
           $titleField.val(data.title);
         if (!$bodyField.val()) // if body field is empty, fill in body
           $bodyField.val(data.description);
-
+        if (!$sourceField.val())
+          $sourceField.val(data.provider_name);
+            
         data.url = url;
-        
+
         Telescope.callbacks.run("afterEmbedlyPrefill", data);
 
       }
