@@ -11,6 +11,11 @@ Posts.getLink = function (post, isAbsolute) {
 };
 Posts.helpers({getLink: function (isAbsolute) {return Posts.getLink(this, isAbsolute);}});
 
+Posts.getDirectLink = function (post, isAbsolute) {
+  return !!post.url ? post.url : this.getPageUrl(post, isAbsolute);
+};
+Posts.helpers({getDirectLink: function (isAbsolute) {return Posts.getDirectLink(this, isAbsolute);}});
+
 /**
  * Depending on the settings, return either a post's URL link (if it has one) or its page URL.
  * @param {Object} post
