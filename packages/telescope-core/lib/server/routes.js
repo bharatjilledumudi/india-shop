@@ -24,7 +24,7 @@ Picker.route('/out', function(params, req, res, next) {
     if (post) {
       var ip = req.connection.remoteAddress;
       increasePostClicks(post._id, ip);
-      res.writeHead(302, {'Location': query.url, 'X-Frame-Options': 'DENY'});
+      res.writeHead(302, {'Location': query.url, 'content-type': 'text/html', 'X-Frame-Options': 'deny'});
       res.end();
     } else {
       // don't redirect if we can't find a post for that link
