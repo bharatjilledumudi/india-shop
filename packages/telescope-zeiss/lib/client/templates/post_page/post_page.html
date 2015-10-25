@@ -39,6 +39,12 @@
             {{> post_body}}
           {{/if}}
 
+          {{#if price}}
+            <div class="post-price2">
+              {{{icon "currency"}}}{{{price}}}
+            </div>
+          {{/if}}
+
           {{> post_categories}}
 
           <div class="post-info">
