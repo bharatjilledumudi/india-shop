@@ -1,7 +1,7 @@
 Package.describe({
   name: 'telescope:lib',
   summary: 'Telescope libraries.',
-  version: '0.25.2',
+  version: '0.25.4',
   git: "https://github.com/TelescopeJS/Telescope.git"
 });
 
@@ -73,7 +73,7 @@ Package.onUse(function (api) {
     'tmeasday:publish-counts@0.7.2',
     // 'dburles:iron-router-query-array@1.0.1'
     'utilities:onsubscribed@0.1.2',
-    'utilities:menu@0.1.1'
+    'utilities:menu@0.1.4'
   ];
 
   api.use(packages);

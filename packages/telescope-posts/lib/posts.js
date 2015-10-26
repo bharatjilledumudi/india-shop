@@ -39,6 +39,7 @@ Posts.schema = new SimpleSchema({
     editableBy: ["member", "admin"],
     autoform: {
       type: "bootstrap-url",
+      order: 10
     }
   },
   /**
@@ -48,7 +49,10 @@ Posts.schema = new SimpleSchema({
     type: String,
     optional: false,
     max: 500,
-    editableBy: ["member", "admin"]
+    editableBy: ["member", "admin"],
+    autoform: {
+      order: 20
+    }
   },
   /**
     Slug
@@ -67,7 +71,8 @@ Posts.schema = new SimpleSchema({
     editableBy: ["member", "admin"],
     autoform: {
       type: "hidden",
-      rows: 5
+      rows: 5,
+      order: 30
     }
   },
   /**
@@ -205,7 +210,7 @@ Posts.schema = new SimpleSchema({
     optional: true
   },
   /**
-    The post author's `_id`. 
+    The post author's `_id`.
   */
   userId: {
     type: String,
@@ -265,4 +270,3 @@ Posts.allow({
   update: _.partial(Telescope.allowCheck, Posts),
   remove: _.partial(Telescope.allowCheck, Posts)
 });
-
