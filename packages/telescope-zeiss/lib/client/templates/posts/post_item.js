@@ -3,6 +3,6 @@ Template.post_item.helpers({
     return Telescope.utils.trimWords(this.htmlBody, 20);
   },
   title: function () {
-    return Telescope.utils.trimWords(this.title, 8);
+    return Telescope.utils.trimWords(this.title, 6);
   }
 });
