@@ -6,9 +6,11 @@
       <div class="post-thumbnail-loading">{{>spinner}}</div>
     </div>
   </div>
-  <input type="hidden" value="{{this.value}}" {{this.atts}}/>
   {{#if isAdmin}}
-    <a href="#" class="regenerate-thumbnail-link">{{_ 'regenerate_thumbnail'}}</a>
+    <input type="text" value="{{this.value}}" {{this.atts}}/>
+    <!-- <a href="#" class="regenerate-thumbnail-link">{{_ 'regenerate_thumbnail'}}</a> -->
+  {{else}}
+    <input type="hidden" value="{{this.value}}" {{this.atts}}/>
   {{/if}}
   <a href="#" class="remove-thumbnail-link">{{_ 'clear_thumbnail'}}</a>
   {{else}}
