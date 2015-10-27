@@ -131,7 +131,7 @@
     // border-radius: 3px;
     position: relative;
     overflow: hidden;
-    padding: 13px;
+    padding: 14px;
     @include small{
       margin-bottom: 10px;
     }
@@ -252,7 +252,7 @@
   font-size: 16px;
   line-height: 1.3;
   &, a{
-    font-weight: $bold;
+    font-weight: $bolder;
   }
   &:visited{
     color: #444;
