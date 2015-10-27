@@ -2,8 +2,8 @@ getEmbedlyData = function (url) {
   var data = {};
   var extractBase = 'http://api.embed.ly/1/extract';
   var embedlyKey = Settings.get('embedlyKey');
-  var thumbnailWidth = Settings.get('thumbnailWidth', 200);
-  var thumbnailHeight = Settings.get('thumbnailHeight', 125);
+  var thumbnailWidth = Settings.get('thumbnailWidth', 400);
+  var thumbnailHeight = Settings.get('thumbnailHeight', 250);
 
   if(!embedlyKey) {
     // fail silently to still let the post be submitted as usual
